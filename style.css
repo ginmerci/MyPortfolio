@@ -317,6 +317,25 @@ a{ color: inherit; }
 .project__thumb--erp{ background: linear-gradient(135deg, #2f80ed, #14213d); }
 .project__thumb--tool{ background: linear-gradient(135deg, #4facfe 0%, #1d63c4 100%); }
 .project__thumb--web{ background: linear-gradient(135deg, #56ccf2, #2f80ed); }
+.project__thumb--photo{
+  padding: 0;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.project__thumb--photo img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.project__thumb--photo .project__tag{
+  position: relative;
+  z-index: 1;
+  margin: 14px;
+  background: rgba(20,33,61,.55);
+}
 .project__tag{
   font-family: var(--font-mono);
   font-size: 11.5px;
