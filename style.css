@@ -317,6 +317,12 @@ a{ color: inherit; }
 .project__thumb--erp{ background: linear-gradient(135deg, #2f80ed, #14213d); }
 .project__thumb--tool{ background: linear-gradient(135deg, #4facfe 0%, #1d63c4 100%); }
 .project__thumb--web{ background: linear-gradient(135deg, #56ccf2, #2f80ed); }
+a.project{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .project__thumb--photo{
   padding: 0;
   align-items: flex-end;
@@ -329,12 +335,16 @@ a{ color: inherit; }
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  transition: transform .25s ease;
 }
 .project__thumb--photo .project__tag{
   position: relative;
   z-index: 1;
   margin: 14px;
   background: rgba(20,33,61,.55);
+}
+.project:hover .project__thumb--photo img{
+  transform: scale(1.05);
 }
 .project__tag{
   font-family: var(--font-mono);
